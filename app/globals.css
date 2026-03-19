@@ -9,6 +9,10 @@
   --muted: #64748b;
   --border: #e2e8f0;
 
+  /* Font for body and navigations */
+  --font-display: "Poppins", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+
   /* Alias used by @theme below */
   --brand: var(--primary);
 
@@ -59,9 +63,13 @@
 body {
   background: var(--color-background);
   color: var(--color-foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
 }
 
-@utility flex-middle{
+h1, h2, h3, h4, h5 h6 {
+  font-family: var(--font-display);
+}
+
+@utility flex-middle {
   @apply flex items-center justify-center
 }

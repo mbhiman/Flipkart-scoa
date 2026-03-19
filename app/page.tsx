@@ -25,8 +25,6 @@ export default function HomePage() {
             Learn More
           </button>
 
-          <h1 className="text-primary">sjkcasnkcj</h1>
-
         </div>
 
       </section>

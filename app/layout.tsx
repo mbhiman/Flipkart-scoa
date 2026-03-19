@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins, Open_Sans } from "next/font/google"
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { Navbar } from "./components/Navbar";
 import { AppToaster } from "./components/popup/AppToaster";
 
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const poppins = Poppins({
   subsets: ["latin"],
-});
+  weight: ["600", "700", "800"],
+  variable: "--font-display",
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const openSans = Open_Sans({
   subsets: ["latin"],
-});
+  weight: ["400", "600"],
+  variable: "--font-body",
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -29,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${openSans.className} ${poppins.variable} ${openSans.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"
